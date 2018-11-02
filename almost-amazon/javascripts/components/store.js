@@ -13,17 +13,20 @@ let bookstore = {
 const bookStringBuilder = () => {
   let newString = "";
   for (let i = 0; i < bookstore.books.length; i++) {
-    newString += `<div class="col-md book-card" id="">`;
-    newString += `<div class="card">`;
-    newString += `<div class="book-card">`;
-    newString += `<img src="${bookstore.books[i].imageUrl}">`;
+    newString += `<div class="container">`;
+    newString += `<div class="row">`;
+    newString += `<div class="col-sm">`;
+    newString += `<div class="card  book-cards">`;
+    newString += `<img class="card-img-top" src="${bookstore.books[i].imageUrl}">`;
     newString += `<h2>${bookstore.books[i].title}</h2>`;
     newString += `<h5>${bookstore.books[i].year}</h5>`;
+    newString += `<button type="button" class="btn btn-primary">Add To Cart</button>`;
+    newString += `</div>`;
     newString += `</div>`;
     newString += `</div>`;
     newString += `</div>`;
   }
-  printToDom(newString, "bookContainer");
+  printToDom(newString, "book-store");
 };
 
 bookStringBuilder();
