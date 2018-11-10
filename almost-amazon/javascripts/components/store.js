@@ -13,12 +13,12 @@ const getBooks = () => {
 
 const addToCart = () => {
   const addToCartButton = document.getElementById("addToCartBtn");
- addToCartButton.addEventListener("click", cartBuilder);
+ addToCartButton.addEventListener("click", () => {
+    cartBuilder(getBooks());
+ });
  }
  
-
-
-const bookCardBuilder = () => {
+ const bookCardBuilder = () => {
   let newString = "";
   for (let i = 0; i < books.length; i++) {
     newString += `<div class="container">`;
@@ -29,7 +29,7 @@ const bookCardBuilder = () => {
       books[i].imageUrl
     }">`;
     newString += `<h2>${books[i].title}</h2>`;
-    newString += `<h5>${books[i].year}</h5>`;
+    newString += `<h5>Release Date: ${books[i].year}</h5>`;
     newString += `<button type="button" id="addToCartBtn" class="btn btn-primary">Add To Cart</button>`;
     newString += `</div>`;
     newString += `</div>`;
