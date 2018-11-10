@@ -1,0 +1,10 @@
+{
+  "books": [
+    {
+      "imageUrl": "../img/LETC.jpg",
+      "title": "The Little Engine That Could",
+      "year": "1930",
+      "price": "$14.30"
+    }
+  ]
+}
